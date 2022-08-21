@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- <header>
+        <nav id="nav">      
+            <div class="logo">
+                <img src="images/23251.jpg" alt="">
+            </div>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <ul class="ul">
+                <li ><a class="a active" href="#">Home</a></li>
+                <li><a class="a" href="#">About</a></li>
+                <li><a a class="a" href="#">What I Do</a></li>
+                <li ><a a class="a" href="#">Resume</a></li>
+                <li><a a class="a" href="#">Portfolio</a></li>
+                <li><a a class="a" href="#">Client</a></li>
+                <li ><a a class="a" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+
+   
+
+
+
+
+       <div class="w-75 mx-auto my-5">
+    
+            <div class="container mb-2 ">
+                <div class="mb-4">
+                    <label class="text-info" for="ClientName"> اسم المؤكل  </label>
+                    <input type="text" class="form-control" id="ClientName">
+                </div>
+        
+                <div class="mb-4">
+                    <label for="SecondClintName"> اسم الخصم  </label>
+                    <input type="text" class="form-control" id="SecondClintName">
+                </div>
+        
+                <div class="mb-4">
+                    <h5 >الجهة التابعة لها القضية (المحكمة والدايرة)</h5>
+                    <table class="table table-striped">
+            
+                        <thead>
+                            <th>  المحكمه </th>
+                            <th> الدائرة </th>
+                            <th>   رقم القضية  </th>
+                             <th>   سنة القضية</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="text" class="form-control"  name="" id="court">
+                                </td>
+                                <td>
+                                    <input type="text" class="form-control"  name="" id="courtTwo">
+                                </td>
+                                <td>
+                                    <input type="number" class="form-control"  name="" id="caseNum">
+                                </td>
+                                <td>
+                                    <input type="date" class="form-control"  name="" id="caseYear">
+                                </td>
+                           
+                            </tr>
+                
+                        </tbody>
+                    
+                    </table>
+                </div>
+            </div>
+            <div class="container mb-2">
+                <h3>الجلسات
+            
+                </h3>
+                <table class="table table-striped">
+            
+                    <thead>
+                        <th>التاريخ</th>
+                        <th>ما تم فيها</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="date" name="" id="">
+                            </td>
+                            <td>
+                                <textarea class="form-control" id=""></textarea>
+                            </td>
+                       
+                        </tr>
+            
+                    </tbody>
+                
+                </table>
+            
+                <div id="row"></div>
+                <button class="btn btn-outline-success mt-3 " onclick="addrow()">  اضافه جلسه  </button>
+            </div>
+            <div class="container mb-2">
+  
+                <h3>القضية</h3>
+
+                <table class="table table-striped">
+
+                    <thead>
+                        <th> المطلوب  </th>
+                        <th>ما تم انجازه</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <textarea class="form-control" id="requered"></textarea>   
+                            </td>
+                            <td>
+                                <textarea class="form-control" id="  "></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    
+
+                </table>
+    
+            </div>
+            <div class="container mb-2">
+  
+                <h3> الاتعاب  </h3>
+
+                <table class="table table-striped">
+
+                    <thead>
+                        <th>الواصل   </th>
+                        <th>  الباقى  </th>
+                        <th> المصاريف </th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                
+                                <input type="text" class="form-control" id=""> 
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id=""> 
+                            </td>
+
+                            <td>
+                                <textarea class="form-control" name="" id="" cols="30" rows="2"></textarea> 
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    
+
+                </table>
+    
+            </div>
+            <button class="btn btn-outline-info mt-3" onclick="addProduct()">finish </button>
+        </div>
+    
+        <input type="text" class="form-control w-50 m-auto" onkeyup="search(this.value)" placeholder="search....." id="o">
+    
+        <div class="container my-2">
+            <table class="table table-striped">
+    
+                <thead>
+    
+                    
+                    
+                    
+                    
+                    
+                    <th>delete</th>
+                    <th>update</th>
+                    <th> المطلوب انجازه </th>
+                    <th>  رقم وسنة القضية </th>
+                    <th> المحكمه والدائرة  </th>
+                    <th> الخصم </th>
+                    <th> المؤكل </th>
+                    <th>index</th>
+                </thead>
+                <tbody id="tableBody">
+    
+               
+    
+    
+                </tbody>
+            </table>
+        </div> 
+
+
+
+
+
+        <script src="js/inner.js"></script>
+ 
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
